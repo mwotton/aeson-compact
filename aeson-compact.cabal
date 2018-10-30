@@ -1,0 +1,49 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: caf1c74dc36d0926a0097a9f02b224fd4eeff6e873e2feca9e9e36533c336725
+
+name:           aeson-compact
+version:        0.1.0.0
+category:       Web
+homepage:       https://github.com/githubuser/aeson-compact#readme
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+library
+  exposed-modules:
+      Data.Aeson.Compact
+  other-modules:
+      Paths_aeson_compact
+  hs-source-dirs:
+      src
+  build-depends:
+      aeson
+    , aeson-diff
+    , base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_aeson_compact
+  hs-source-dirs:
+      test
+  build-depends:
+      QuickCheck
+    , aeson
+    , aeson-compact
+    , aeson-diff
+    , base >=4.7 && <5
+    , hspec
+  default-language: Haskell2010
